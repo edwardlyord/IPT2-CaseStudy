@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Anthony Montoya</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <link rel="stylesheet" href="design.css">
+
+    <style>
+    ion-toolbar{
+    --background: #dfedf9;
+    }
+    </style>
+
+
+</head>
+
+<body>
+<ion-app>
+    <ion-header>
+    <ion-toolbar>
+
+            <ion-buttons slot="start">
+            <ion-button size = large id = "open-modal" onclick = "randompic()"> <ion-icon name="dice-outline"></ion-icon></ion-button>
+            </ion-buttons>
+            <ion-buttons slot="end">
+            <ion-button href = "https://youtu.be/RPK01APnC-0?si=EEtVpSQKg4VnLhtK" target = "_blank"><ion-icon size = "large" name="logo-youtube"></ion-icon> </ion-button>
+            </ion-buttons>
+                <ion-modal trigger = "open-modal">
+                        <ion-toolbar>
+                            <ion-buttons slot="start">
+                                <ion-button onclick = "cancel()" >Close</ion-button>
+                            </ion-buttons>
+                            <ion-buttons slot="end">
+                                <ion-button size = large id = "open-modal"  onclick = "randompic()"> <ion-icon name="dice-outline"></ion-icon></ion-button>
+                            </ion-buttons>
+                        </ion-toolbar>
+                <ion-content>
+                    <img id = "picHere"> </img>
+                </ion-content>
+                </ion-modal>
+
+    </ion-toolbar>
+    </ion-header>
+
+    <ion-content style = "--padding-top:70px">
+        <ion-title id = "name">John Anthony Christopher Montoya</ion-title><br>
+        
+        <!-- just a popover -->
+        <ion-button id = "what" shape = "round" fill = "outline" color="dark">CLICK ME!</ion-button>
+        <ion-popover trigger= "what" trigger-action="click">
+            <ion-content id = "pop" class="ion-padding">Hello World! (this actually does nothing, just a popover :D)</ion-content>
+        </ion-popover>
+
+        <br><br>
+        <p style = "padding-top: 30px;" id = "text" >Hello! I'm John Anthony, that's my name up there. <br> I'm studying to be a developer. <br> Try clicking some buttons on this page, you might like the results!</p><br><br>
+
+        <ion-button id = "change" onclick = "fontChange()">Try this button!</ion-button> <br><br>
+
+        <ion-button id = "show" onclick = "block()"> How about this one??</ion-button> <br><br>
+        
+        <div style = "display: none; padding-top: 150px;" id = "hiddenLeaf">
+            <p id = "text" >I hope you liked my webpage! <br><br> You can contact me thru the following:</p>
+                
+            <br><br>
+            <ion-button id = "socials" href = "https://www.facebook.com/" target = "_blank"> <ion-icon name="logo-facebook" color = "dark"></ion-icon> </ion-button>
+            <ion-button id = "socials" href = "https://www.instagram.com/" target = "_blank"> <ion-icon name="logo-instagram" color = "dark"></ion-icon> </ion-button>
+            <ion-button id = "socials" href = "https://x.com/" target = "_blank"> <ion-icon name="logo-twitter" color = "dark"></ion-icon> </ion-button>
+        </div>
+    </ion-content>
+</ion-app>
+
+<!-- script -->
+
+<script>
+var modal = document.querySelector('ion-modal');
+
+function cancel() {
+   modal.dismiss(null, 'cancel');
+}
+
+    const pics = [];
+    pics [0] = "1.jpg";
+    pics [1] = "2.jpg";
+    pics [2] = "3.jpg";
+    pics [3] = "4.jpg";
+    pics [4] = "5.jpg";
+    pics [5] = "6.jpg";
+    pics [6] = "7.jpg";
+    pics [7] = "8.jpg";
+    pics [8] = "9.jpg";
+    pics [9] = "10.jpg";
+    pics [10] = "11.jpg";
+    pics [11] = "12.jpg";
+    pics [12] = "13.jpg";
+    pics [13] = "14.jpg";
+    pics [14] = "15.jpg";
+    pics [15] = "16.jpg";
+    pics [16] = "17.jpg";
+
+function randompic (){
+        // generate a number
+    let number = Math.floor(Math.random() * pics.length);
+        // get image from index
+    show = pics[number]
+        // Display the image
+    document.getElementById('picHere').src = `./images/${show}`
+}
+
+function fontChange(){
+        // Simple font change
+    document.getElementById('text').style.fontFamily = 'Impact'
+
+}
+
+function block(){
+    let x = document.getElementById("hiddenLeaf");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+}
+
+</script>
+</body>
+</html>
