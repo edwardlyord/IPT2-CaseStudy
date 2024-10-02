@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="design - Copy.css">
+  <script src="script - Copy.js"></script>
+  <title>Tolentino</title>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section with Background Image -->
+  <section id="home">
+    <h2>Ercel John L Tolentino</h2>
+    <p>This is a showcase of my skills and projects.</p>
+    <a href="#projects" class="button">View Projects</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="image-gallery">
+    <h2>About me</h2>
+    <h4>Thriving on turning ideas into reality through Clean and Brilliant ideas. With a background in Infromation technology web designer, bring a unique perspective to every project. My goal is to Make things more beautiful and precise, ensuring that each endeavor is not just a task but an opportunity to make a meaningful impact.</h4>
+    <div class="image-item" data-description="I have a keen eye for detail and a passion for refining content. Whether it's written articles, web content, or multimedia projects, I excel at enhancing clarity and impact. My editing skills ensure that every piece resonates with its audience and conveys the intended message effectively.">
+        <img src="Editing(1).jpg" alt="Image 1">
+        <p>Editing</p>
+    </div>
+    <div class="image-item" data-description="Beyond my professional work, I embrace hobbies that fuel my creativity and keep my skills sharp. Engaging in various activities allows me to explore new ideas and perspectives, enriching my overall approach to projects. This blend of work and play inspires innovative solutions and fresh concepts.">
+        <img src="gaming.jpg" alt="Image 2">
+        <p>Hobby</p>
+    </div>
+    <div class="image-item" data-description="As a skilled coder, I thrive on transforming ideas into functional applications and websites. Proficient in multiple programming languages, I enjoy tackling complex challenges and developing clean, efficient code. My coding expertise not only enhances my technical skills but also empowers me to bring imaginative designs to life.">
+      <img src="background.webp" alt="Image 3">
+      <p>Coding</p>
+  </div>  
+</section>
+
+<div class="image-popup">
+    <img src="" alt="Popup Image" class="popup-image">
+    <p class="popup-description"></p>
+</div>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h1>Portfolio Highlights</h1>
+    <h3>Explore my portfolio to witness the culmination of my dedication and passion. From Editing and Programming, each piece reflects our commitment to excellence and innovation. I believe in the power of collaboration and strive to create solutions that not only meet but exceed expectations.</h3>
+    <br>
+    <h2>My Projects</h2>
+    <article>
+      <div class="fold-container">
+        <div class="fold">
+            <img src="port.png" alt="Folded Image">
+            <div class="description"> 
+                <p>Web designing for me is the art and science of creating visually appealing and functional websites. It's a multidisciplinary craft that blends creativity, user experience (UX) design, and technical expertise to deliver a seamless digital presence.</p>
+            </div>
+        </div>
+    </div>
+    </article>
+    <article id="sentro">
+    <div class="fold-container">
+      <div class="fold">
+          <img src="Edit.jpg" alt="Folded Image">
+          <div class="description">
+              <p>I Edit different kinds of projects in a proper and precise manner with best heart and skills that we can give just to make everything beautiful.</p>
+          </div>
+      </div>
+  </div>
+</article>
+<article>
+  <div class="fold-container">
+    <div class="fold">
+        <img src="pre.jpg" alt="Folded Image">
+        <div class="description">
+            <p>Whether it's web development, software engineering, or solving complex problems, I revel in the process of bringing lines of code to life. It's not just about creating programs; it's about architecting solutions that enhance, simplify, and inspire.</p>
+        </div>
+    </div>
+</div>
+</article>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>   
+    <p>Feel free to reach out to me through email or social media.</p>
+    <form action="submit_form.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+<br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+<br><br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+<br><br>
+      <button type="submit" style="color: black; ">Submit</button>
+
+      <div class="container">
+        <h2>Contact Details</h2>
+        <p>Email: erceljohnt@gmail.com</p>
+        <p>Phone: +63 907-891-4128</p>
+        <p>Address: 174 Angeles city pampanga</p>
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">^</button>
+  </form>
+  </section>
+
+</body>
+</html>
